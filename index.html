@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Examen II parcial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav">
+  <a class="logo" href="#inicio">Ing. en Computación</a>
+  <button id="burger" aria-label="Abrir menú">☰</button>
+  <nav id="menu">
+    <a href="#organigrama">Universidad</a><a href="#carrera">Carrera</a><a href="#modalidades">Modalidades</a>
+    <a href="#perfiles">Perfiles</a><a href="#areas">Áreas</a><a href="#plan">Plan de estudio</a>
+    <a href="#resenas">Reseñas</a><a href="#comentarios">Comentarios</a>
+  </nav>
+</header>
+<main>
+<section id="inicio" class="carousel" aria-label="Información destacada">
+  <div class="slide s1"><h1>Ingeniería en Computación</h1><p>Diseña el software, el hardware y las redes que sostienen el mundo digital.</p></div>
+  <div class="slide s2"><h1>Aprende construyendo</h1><p>Laboratorios, proyectos reales y prácticas desde los primeros períodos.</p></div>
+  <div class="slide s3"><h1>Estudia a tu ritmo</h1><p>Elige entre modalidad presencial, semipresencial o en línea.</p></div>
+  <button id="prev" aria-label="Anterior">‹</button><button id="next" aria-label="Siguiente">›</button>
+  <div id="dots"></div>
+</section>
+
+<section id="organigrama">
+  <h2>Organigrama de la universidad</h2>
+  <div class="org">
+    <div class="node">Rectoría</div>
+    <div class="branches">
+      <div class="branch">
+        <div class="node">Vicerrectoría académica</div>
+        <div class="node">Facultad de Ingeniería</div>
+        <div class="node hl">Carrera de Ingeniería en Computación</div>
+      </div>
+      <div class="branch">
+        <div class="node">Vicerrectoría administrativa</div>
+        <div class="node">Admisiones</div>
+      </div>
+      <div class="branch">
+        <div class="node">Secretaría general</div>
+        <div class="node">Bienestar estudiantil</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="carrera">
+  <h2>Descripción de la carrera</h2>
+  <p>Ingeniería en Computación forma profesionales capaces de analizar, diseñar y construir sistemas de cómputo: desde el hardware y los sistemas operativos hasta aplicaciones web, bases de datos, redes e inteligencia artificial. Combina matemáticas, programación y trabajo en equipo para resolver problemas reales con tecnología.</p>
+</section>
+
+<section id="modalidades">
+  <h2>Modalidades, duración y horarios</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Modalidad</th><th>Duración</th><th>Horario</th></tr></thead>
+    <tbody>
+      <tr><td>Presencial</td><td>8 semestres (4 años)</td><td>Lunes a viernes, 7:00 a 13:00</td></tr>
+      <tr><td>Semipresencial</td><td>6 períodos (3 años)</td><td>Viernes noche y sábados</td></tr>
+      <tr><td>En línea</td><td>4 bloques (2 años)</td><td>Flexible, con tutorías semanales</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="perfiles">
+  <h2>Perfiles de salida</h2>
+  <div class="grid">
+    <article class="card"><h3>Desarrollador de software</h3><p>Crea aplicaciones web, móviles y de escritorio con buenas prácticas de ingeniería.</p></article>
+    <article class="card"><h3>Administrador de redes</h3><p>Diseña, protege y mantiene la infraestructura de comunicaciones de una organización.</p></article>
+    <article class="card"><h3>Analista de datos e IA</h3><p>Convierte datos en decisiones con bases de datos y modelos de aprendizaje automático.</p></article>
+    <article class="card"><h3>Líder de proyectos TI</h3><p>Planifica y coordina equipos para entregar soluciones tecnológicas a tiempo.</p></article>
+  </div>
+</section>
+
+<section id="areas">
+  <h2>Áreas de estudio</h2>
+  <div class="grid">
+    <article class="card"><h3>Programación y software</h3><p>Algoritmos, estructuras de datos, programación web e ingeniería de software.</p></article>
+    <article class="card"><h3>Hardware y arquitectura</h3><p>Arquitectura de computadoras, sistemas operativos y sistemas distribuidos.</p></article>
+    <article class="card"><h3>Redes y seguridad</h3><p>Redes de computadoras, seguridad informática y computación en la nube.</p></article>
+    <article class="card"><h3>Datos e inteligencia artificial</h3><p>Bases de datos, inteligencia artificial y análisis de algoritmos.</p></article>
+  </div>
+</section>
+
+<section id="plan">
+  <h2>Plan de estudio por modalidad</h2>
+  <div id="tabs" role="tablist"></div>
+  <div id="plan-out" class="grid"></div>
+</section>
+
+<section id="resenas">
+  <h2>Reseñas</h2>
+  <div class="grid" id="fijas">
+    <blockquote class="card"><p>“Los proyectos me dieron portafolio antes de graduarme.”</p><cite>Ana R., egresada</cite></blockquote>
+    <blockquote class="card"><p>“Pude trabajar y estudiar en línea sin perder el ritmo.”</p><cite>Luis M., estudiante</cite></blockquote>
+  </div>
+  <div class="grid" id="lista"></div>
+</section>
+
+<section id="comentarios">
+  <h2>Déjanos tu comentario</h2>
+  <form id="form">
+    <label>Nombre <input name="nombre" required maxlength="60"></label>
+    <label>Correo <input name="email" type="email" required maxlength="80"></label>
+    <label>Calificación
+      <select name="calificacion"><option>5</option><option>4</option><option>3</option><option>2</option><option>1</option></select>
+    </label>
+    <label>Comentario <textarea name="mensaje" rows="4" required maxlength="500"></textarea></label>
+    <button type="submit">Enviar comentario</button>
+    <p id="estado" role="status"></p>
+  </form>
+</section>
+</main>
+<footer>© 2026 Universidad Ejemplo · Carrera de Ingeniería en Computación</footer>
+<script src="app.js"></script>
+</body>
+</html>
